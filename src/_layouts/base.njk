@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Banjul City Council - {{ title or "The official website of Banjul City Council" }}</title>
+  
+  <!-- UnoCSS generated styles -->
+  <link rel="stylesheet" href="/assets/css/uno.css">
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col font-sans">
+  
+  <header class="bg-blue-800 text-white p-4 shadow-md">
+    <div class="max-w-4xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">Banjul</h1>
+      <nav>
+        <a href="/" class="px-2 hover:underline">Home</a>
+        <a href="/admin/" class="px-2 hover:underline">Admin</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto p-4 flex-1 w-full">
+    {{ content | safe }}
+  </main>
+
+  <footer class="bg-gray-800 text-white text-center p-4 text-sm">
+    <p>&copy; Banjul City Council</p>
+  </footer>
+
+  <script src="/assets/js/alpine.min.js"></script>
+</body>
+</html>

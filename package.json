@@ -1,0 +1,32 @@
+{
+  "name": "banjul",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "build:css": "unocss \"src/**/*.njk\" -o src/assets/css/uno.css --minify",
+    "watch:css": "unocss \"src/**/*.njk\" -o src/assets/css/uno.css --watch",
+    "build": "pnpm build:css && eleventy",
+    "dev": "pnpm build:css && eleventy --serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "11.24.0",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@11.24.0",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@11ty/eleventy-img": "^7.0.0",
+    "@unocss/cli": "^66.10.5",
+    "@unocss/preset-uno": "^66.10.5",
+    "alpinejs": "^3.17.4",
+    "unocss": "^66.10.5"
+  }
+}
