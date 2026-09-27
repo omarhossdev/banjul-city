@@ -1,0 +1,17 @@
+<header class="flex justify-between">
+  <a href="/">
+    <img src="/assets/images/logo.png" class="bg-transparent w-30" alt="Banjul City Council" />
+  </a>
+  <nav class="bg-red-100 dark:bg-red-800">
+    <button 
+      id="menu-btn" aria-label="Toggle Navigation" aria-expanded="false" class="group w-10 h-10 flex items-center justify-center rounded-xl bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors focus:outline-none focus:ring-2 focus:ring-indigo-500"
+      onclick="this.classList.toggle('active'); this.setAttribute('aria-expanded', this.classList.contains('active'))"
+    >
+      <svg class="w-6 h-6 stroke-slate-800 dark:stroke-slate-100" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round">
+        <path class="transition-transform duration-300 origin-[12px_6px] [.active_&]:translate-y-[6px] [.active_&]:rotate-45" d="M4 6h16" />
+        <path class="transition-opacity duration-300 [.active_&]:opacity-0" d="M4 12h16" />
+        <path class="transition-transform duration-300 origin-[12px_18px] [.active_&]:-translate-y-[6px] [.active_&]:-rotate-45" d="M4 18h16" />
+      </svg>
+    </button>
+  </nav>
+</header>

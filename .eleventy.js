@@ -9,6 +9,7 @@ export default function(eleventyConfig) {
   // Passthrough static assets and Decap admin directory
   eleventyConfig.addPassthroughCopy({ "src/admin": "admin" });
   eleventyConfig.addPassthroughCopy("src/assets/css");
+  eleventyConfig.addPassthroughCopy("src/assets/images");
 
   // 11ty Image Shortcode (Optimized AVIF/WebP generation with responsive sizes)
   eleventyConfig.addAsyncShortcode("image", async function(src, alt, sizes = "100vw") {
