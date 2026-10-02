@@ -19,16 +19,14 @@
   </style>
 </head>
 <body x-data="{ open: false, langOpen: false, currentLang: 'EN' }">
-  <header class="relative shadow-md flex px-1 py-2 justify-between
-    bg-[linear-gradient(to_bottom,#CE1126_0%,#CE1126_38%,#FFFFFF_38%,#FFFFFF_40%,#0C1C8C_40%,#0C1C8C_60%,#FFFFFF_60%,#FFFFFF_62%,#3A7728_62%,#3A7728_100%)]
-dark:bg-[linear-gradient(to_bottom,#8B0B1A_0%,#8B0B1A_38%,#E5E5E5_38%,#E5E5E5_40%,#081258_40%,#081258_60%,#E5E5E5_60%,#E5E5E5_62%,#275018_62%,#275018_100%)]
+  <header class="fixed top-0 w-screen transition duration-100 flex px-1 z-80 py-2 justify-between bg-gray-200/85 dark:bg-gray-950/95
   ">
     <a href="/" class="no-underline flex flex-col items-center">
-      <img src="/assets/images/logo.png" class="bg-transparent w-20" alt="Banjul City Council" />
-      <h1 class="text-xs m-0 text-white italic">Banjul City Council</h1>
+      <img src="/assets/images/logo.png" class="bg-transparent w-17 sm:w-23" alt="Banjul City Council" />
+      <h1 class="text-xs m-0 text-black dark:text-white">Banjul City Council</h1>
     </a>
-    <nav class="flex items-center gap-2">
-      <button class="border-0 bg-transparent text-white" x-data="{
+    <nav class="flex items-center gap-1">
+      <button class="border-2 rounded-lg border-gray-900 p-1 dark:border-white bg-transparent text-black dark:text-white" x-data="{
         dark: localStorage.getItem('theme') === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches),
         toggle() {
           this.dark = !this.dark;
@@ -39,18 +37,18 @@ dark:bg-[linear-gradient(to_bottom,#8B0B1A_0%,#8B0B1A_38%,#E5E5E5_38%,#E5E5E5_40
       x-init="document.documentElement.classList.toggle('dark', dark)"
       @click="toggle()"
       :aria-label="dark ? 'Switch to light theme' : 'Switch to dark theme'">
-        <svg x-show="dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
+        <svg x-show="dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386-1.591 1.591M21 12h-2.25m-.386 6.364-1.591-1.591M12 18.75V21m-4.773-4.227-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z" />
         </svg>
 
 
-        <svg x-show="!dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
+        <svg x-show="!dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.72 9.72 0 0 1 18 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 0 0 3 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 0 0 9.002-5.998Z" />
         </svg>
       </button>
 
-      <button id="menu-btn" aria-label="Toggle Navigation" class="border-0 bg-transparent text-white" @click="open = !open" :aria-expanded="open">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
+      <button id="menu-btn" aria-label="Toggle Navigation" class="border-2 rounded-lg border-gray-950 dark:border-white bg-transparent text-black dark:text-white p-1" @click="open = !open" :aria-expanded="open">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
         </svg>
       </button>
